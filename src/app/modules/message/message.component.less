@@ -1,0 +1,166 @@
+@baseFont: 25;
+
+.right {
+    float: right;
+
+}
+.triangle {
+    width: 14rem / @baseFont;
+    height: 14rem / @baseFont;
+    background-color: #fff;
+    transform: rotateZ(135deg);
+    -moz-transform:rotateZ(135deg); 
+  }
+
+body {
+    background-attachment:fixed;
+    background: url(./../../../assets/img/words/bg9.jpg);
+    background-size: cover;
+}
+
+.main-contents {
+    width: 100%;
+    height: 100%;
+    // background-color: #fff;
+   
+    margin: 10rem / @baseFont auto;
+    padding-top: 30rem / @baseFont;
+    .main-message {
+        width: 14rem;
+        margin: 0 auto;
+        .leave-message {
+
+            width: 11.5rem;
+            // height: 10rem;
+            height: 100%;
+            margin-bottom: 15rem / @baseFont;
+    
+            .messageimg {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-top: 15rem / @baseFont;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .names {
+                    color: #fff;
+                    font-size: 12rem/ @baseFont;
+                    text-align: center;
+                   
+                }
+            }
+            .dbubble {
+                width: 200rem / @baseFont;
+                opacity: 1;
+                position: relative;
+                background-color: #fff;
+                border: 1px solid #dedede;
+                padding: 15rem / @baseFont 15rem / @baseFont;
+                z-index: 20;
+                border-radius: 8rem / @baseFont;
+                .dbubble-text {
+                    font-size: 14rem / @baseFont;
+                    color: #303030;
+                    line-height: 1.6;
+                    font-family: "微软雅黑";
+                    p:first-child {
+                        padding-bottom: 10rem / @baseFont;
+                        border-bottom: 1px solid #666;
+                    }
+                    .date {
+                        color: #666;
+                        text-align: right;
+                        font-size: 10rem/ @baseFont;
+                        padding-top: 10rem / @baseFont;
+                    }
+                  }
+
+                  .triangle-box-left {
+                    position: absolute;
+                    top: 20rem / @baseFont;
+                    left: -8rem / @baseFont;
+                    .triangle {
+                        border-bottom: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                      }
+                  }
+                  .triangle-box-right {
+                    position: absolute;
+                    top: 20rem / @baseFont;
+                    right: -8rem / @baseFont;
+                    .triangle {
+                        border-top: 1px solid #fff;
+                        border-left: 1px solid #fff;
+                      }
+                  }
+                
+              }
+        }
+    }
+    .review_content {
+        width: 12rem;
+        margin: 0 auto;
+        padding: 10rem / @baseFont;
+        
+        .input {
+            width: 300rem / @baseFont;
+            height: 100%;
+            margin: 20rem / @baseFont auto;
+            .post_word {
+                width: 300rem / @baseFont;
+                height: 100rem / @baseFont;
+                border: 1px solid #4854e094;
+                border-radius: 8rem / @baseFont;
+                resize: none;
+                padding: 5rem / @baseFont;
+            }
+            .mysubmit{
+                width: 200rem / @baseFont;
+                margin: 1rem / @baseFont auto;
+                display: flex;
+                justify-content: space-between;
+                .names{
+                    width: 120rem / @baseFont;
+                    height: 25rem / @baseFont;
+                    border-radius: 8rem / @baseFont;
+                    border: none;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 2rem / @baseFont;
+                    background-color: #e8e8e8;
+                    i {
+                        margin-top: 5rem / @baseFont;
+                        font-size: 15rem / @baseFont;
+                    }
+                    input{
+                        width: 100rem / @baseFont;
+                        background-color: #e8e8e8;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                button {
+                    outline: none;
+                    width: 60rem/ @baseFont;
+                    height: 30rem / @baseFont;
+                    background-color: #4854e0cf;
+                    color: #fff;
+                    font-size: 10rem / @baseFont;
+                    border-radius: 8rem / @baseFont;
+                    border: none;
+                }
+            }
+            .show_msg {
+                display: none;
+                padding: 8rem / @baseFont;
+                text-align: center;
+                background-color: rgb(254,242,225);
+                color: rgb(238,84,42);
+                margin-top: 10rem / @baseFont;
+                font-size: 14rem / @baseFont;
+            }
+        }
+       
+    }
+}

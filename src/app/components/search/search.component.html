@@ -1,0 +1,24 @@
+<form action="">
+    <div class="search_top">
+        <div class="search_input">
+            
+            <input type="text" #searchs name="query_word" [(ngModel)]="query_word">
+            <i class="fa fa-times" aria-hidden="true" *ngIf="query_word" (click)="delete_query()"></i>
+        </div>
+        <button  (click)="searchFor()">搜索</button>
+        <!-- <a [routerLink]="[ '/searchlist']" [queryParams] = "{title: query_word}">ss</a> -->
+    </div>
+</form>
+
+<div class="search_history">
+    <ul>
+        <li>搜索历史</li>
+        <li *ngFor="let item of searchList; let key=index;">
+            <i class="fa fa-external-link"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a [routerLink]="[ '/searchlist']" [queryParams]="{title: item}">{{item}}</a>
+            
+            <i  class="fa fa-trash-o" (click)="delete(key)"></i>
+        </li>
+        
+    </ul>
+</div>

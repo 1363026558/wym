@@ -1,0 +1,228 @@
+@baseFont: 25;
+//标题
+
+
+.content_top {
+    width: 15rem;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 10rem / @baseFont;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #000;
+   
+    h2 {
+        width: 14rem;
+        font-size: 25rem / @baseFont;
+        margin: 20rem / @baseFont auto;
+        font-weight: normal;
+
+    }
+
+    .content_bottom {
+        width: 12rem;
+        height: 35rem / @baseFont;
+        margin: 10rem / @baseFont auto;
+        font-size: 12rem / @baseFont;
+        display: flex;
+        justify-content: space-between;
+        
+        .author-info-right{
+            width: 40rem / @baseFont;
+            height: 18rem / @baseFont;
+            background-color: rgba(92, 184, 92, 0.8);
+            color: #fff;
+            margin-top: 5rem / @baseFont;
+            text-align: center;
+            border-radius: 4rem / @baseFont;
+            padding-top: -1rem / @baseFont;
+            font-weight: 500;
+            font-size: 11rem / @baseFont;
+            p{
+                line-height: 18rem / @baseFont;
+              
+            }
+        }
+        
+        .views, .time {
+            height: 25rem / @baseFont;
+            line-height: 25rem / @baseFont;
+            
+            img {
+                width: 25rem / @baseFont;
+                height: 25rem / @baseFont; 
+                vertical-align: middle; 
+            }
+            span {
+                line-height: 25rem / @baseFont;
+                vertical-align: middle; 
+            }
+            .vspan {
+                font-size: 13rem / @baseFont;
+            }
+        }
+       
+    }
+    .main_content {
+        width: 14.5rem;
+        margin:  20rem / @baseFont auto;
+        font-size: 0.7rem;
+    
+     pre {
+        font-size: 0.5rem!important;
+    }
+    
+    }
+}
+
+
+
+
+
+
+//评论
+.review {
+    width: 15rem;
+    height: 100%;
+    margin: -1rem auto;
+    background-color: #fff;
+    // border-radius: 8rem / @baseFont;
+    .good {
+        width: 60rem / @baseFont;
+        height: 60rem / @baseFont;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 1px dashed #bfbfbf;
+        position: relative;
+        transition: all 1s;
+        img {
+            width: 32rem / @baseFont;
+            height: 32rem / @baseFont;
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -59%);
+            transition: all 1s;
+        }
+        p {
+            color: #bfbfbf;
+            position: absolute;
+            font-size: 10rem / @baseFont;
+            top: 68%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            transition: all 1s;
+        }
+
+        
+    }
+    .plugin{
+        font-size: 16rem / @baseFont;
+        width: 20%;
+        padding: 8rem / @baseFont;
+        color: #4854e0cf;
+        font-weight: normal;
+        border-bottom: 1px solid #4854e094;
+    }
+    .review_content {
+        width: 12rem;
+        margin: 0 auto;
+        padding: 10rem / @baseFont;
+        .input {
+            width: 300rem / @baseFont;
+            height: 100%;
+            margin: 20rem / @baseFont auto;
+            .post_word {
+                width: 300rem / @baseFont;
+                height: 100rem / @baseFont;
+                border: 1px solid #4854e094;
+                border-radius: 4rem / @baseFont;
+                resize: none;
+                
+            }
+            .mysubmit{
+                width: 200rem / @baseFont;
+                margin: 1rem / @baseFont auto;
+                display: flex;
+                justify-content: space-between;
+                .names{
+                    width: 120rem / @baseFont;
+                    height: 25rem / @baseFont;
+                    border-radius: 8rem / @baseFont;
+                    border: 1px solid #4854e094;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 2rem / @baseFont;
+                    background-color: #e8e8e8;
+                    i {
+                        margin-top: 5rem / @baseFont;
+                        font-size: 15rem / @baseFont;
+                    }
+                    input{
+                        width: 100rem / @baseFont;
+                        background-color: #e8e8e8;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                button {
+                    outline: none;
+                    width: 60rem/ @baseFont;
+                    height: 30rem / @baseFont;
+                    background-color: #4854e0cf;
+                    color: #fff;
+                    font-size: 10rem / @baseFont;
+                    border-radius: 8rem / @baseFont;
+                    border: none;
+                }
+            }
+            .show_msg {
+                display: none;
+                padding: 8rem / @baseFont;
+                text-align: center;
+                background-color: rgb(254,242,225);
+                color: rgb(238,84,42);
+                margin-top: 10rem / @baseFont;
+                font-size: 14rem / @baseFont;
+                transition: all 1s;
+            }
+            
+        }
+        ul {
+            width: 300rem / @baseFont;
+            height: 100%;
+            margin: 20rem / @baseFont auto;
+
+            li {
+                width: 100%;
+                min-height: 2.84rem;
+                background: #F6F6F6;
+                margin-bottom: 15rem / @baseFont;
+                padding: 8rem / @baseFont 8rem / @baseFont 20rem / @baseFont 8rem / @baseFont;
+                border-radius: 8rem / @baseFont;
+                .top {
+                    height: 50rem / @baseFont;
+                    .myimg {
+                        
+                        img{
+                            width: 30rem / @baseFont;
+                            height: 30rem / @baseFont;
+                            border-radius: 8rem / @baseFont;
+                        }
+                    }
+                    .message {
+                        margin-left: 40rem / @baseFont;
+                        color: #757575;
+                        font-size: 15rem / @baseFont;
+                        p {
+                            color: #757575;
+                            font-size: 12rem / @baseFont;
+                        }
+                    }
+                }
+                .content {
+                    font-size: 15rem / @baseFont;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<div class="content_top" *ngIf="reads" >
+    <h2 style=" text-align: center;">{{reads.title}}</h2>
+
+    <div class="content_bottom">
+        <div class="author-info-right fl">
+            <p>转载</p>
+            
+        </div>
+        <div class="time">
+            <img src="./../../../assets/img/riqi.png" alt="">
+            <span>{{reads.create_time}}</span>
+        </div>
+        <div class="views">
+            <img src="./../../../assets/img/redu2.png" alt="">
+            <span class="vspan">{{reads.views}}</span>
+        </div>
+
+    </div>
+    <div class="main_content" [innerHTML]="reads.content | htmlpipe">
+        
+    </div>
+   
+      
+</div>
+
+
+<div class="review">
+    <div class="good" (click)="good()" id="good">
+        <img *ngIf="!imgColor" src="./../../../assets/img/read/点赞.png" alt="">
+        <img *ngIf="imgColor" src="./../../../assets/img/read/点赞1.png" alt="">
+        <p id="goodNum">{{goods}}</p> 
+    </div>
+    <p class="plugin">文章评论</p>
+    <div class="review_content">
+    
+            <div class="input">
+                <textarea #review [(ngModel)]="form.content" class="post_word" placeholder="说点什么？"></textarea>
+                <div class="mysubmit">
+                    <div class="names">
+                        <i class="fa fa-user-circle"></i><input type="text" placeholder="你的昵称" [(ngModel)]="form.username">
+                    </div>
+                    <button (click)="postView()">提交</button>
+                </div>
+                <div class="show_msg">
+                    未输入评论内容
+                </div>
+            </div>
+        
+        <ul>
+            <li *ngFor="let review of reviews">
+                <div class="top">
+                    <div class="myimg fl">
+                        <img [src]="review.img" alt="">
+                    </div>
+                    <div class="message">
+                        <h5>{{review.user_name}}</h5>
+                        <p>{{review.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+                    </div>
+                    
+                </div>
+                <div class="content">
+                    <p [innerHTML]="review.content"></p>
+            
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

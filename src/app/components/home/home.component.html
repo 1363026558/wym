@@ -1,0 +1,124 @@
+<div class="tops">
+  <a routerLink='/search'> 
+    <div class="searchs" >
+      <span>搜索</span>
+    </div>
+  </a>
+</div>
+
+<div class="banner" >
+    <ul class="slides" >
+      <li *ngFor="let item of bannerImg"><img [src]="item.src" alt=""></li>
+      <li><img [src]="lastImg" alt=""></li>
+    </ul>
+    <div class="guide_btn">
+      <ol>
+        <li *ngFor="let item of bannerImg"></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="pagelist">
+    <div class="guide">
+      <a [routerLink]="[ '/read', 1]" class="per_content">
+        <h2><img src="./../../../assets/img/list/新闻.png" alt=""></h2>
+        <p>各类时事</p>
+      </a>
+      <a  [routerLink]="[ '/read', 2]" class="per_content">
+        <h2><img src="./../../../assets/img/list/博士帽1.png" alt=""></h2>
+        <p>知识干货</p>
+      </a>
+      <a  [routerLink]="[ '/read', 3]" class="per_content">
+        <h2><img src="./../../../assets/img/list/阅读.png" alt=""></h2>
+        <p>新鲜趣闻</p>
+      </a>
+     
+      <a [routerLink]="[ '/read', 4]" class="per_content special">
+        <h2><img src="./../../../assets/img/list/电脑.png" alt=""></h2>
+        <p>科技前沿</p>
+      </a>
+      <a class="per_content special">
+        <h2><img src="./../../../assets/img/list/锁.png" alt=""></h2>
+        <p>不知道是啥</p>
+      </a>
+      <a [routerLink]="[ '/message' ]" class="per_content special">
+        <h2><img src="./../../../assets/img/list/留言.png" alt=""></h2>
+        <p>畅所欲言</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="leaderboard">
+    <div class="tab_button">
+      <ul class="tab">
+        <li (click)="changetab(1)" class="li_active">热度最高</li>
+        <li (click)="changetab(2)">点赞最多</li>
+        <li (click)="changetab(3)">最新文章</li>
+      </ul>
+    </div>
+     <div class="tab_content active">
+      <ul>
+        <li *ngFor="let item of views; let i = index">
+          <div class="mycontent myactive" *ngIf="i == 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+          <div class="mycontent" *ngIf="i != 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+        </li>
+
+      
+      </ul>
+      
+    </div> 
+    <!-- //点赞 -->
+    <div class="tab_content">
+      <ul>
+        <li *ngFor="let item of good; let i = index">
+          <div class="mycontent myactive" *ngIf="i == 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(5+i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+          <div class="mycontent" *ngIf="i != 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(5+i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- 最新 -->
+    <div class="tab_content">
+      <ul>
+        <li *ngFor="let item of new; let i = index">
+          <div class="mycontent myactive" *ngIf="i == 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(10+i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+          <div class="mycontent" *ngIf="i != 0">
+            <img [src]=logo[i] alt="" (click)="changeShow(10+i)">
+            <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+              <span>{{item.title}}</span>
+            </a>
+            <p>{{item.info}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

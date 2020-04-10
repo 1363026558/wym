@@ -1,0 +1,63 @@
+<div class="main-contents">
+  <div class="review_content">
+    <div class="input">
+        <textarea #review [(ngModel)]="form.content" class="post_word" placeholder="说点什么？"></textarea>
+        <div class="mysubmit">
+            <div class="names">
+                <i class="fa fa-user-circle"></i>
+                <input type="text" placeholder="你的昵称" [(ngModel)]="form.username">
+            </div>
+            <button (click)="postView()">提交</button>
+        </div>
+        <div class="show_msg">
+          {{msg}}
+      </div>
+    </div>
+
+
+</div>
+
+
+    <div class="main-message clearfix">
+        <div *ngFor="let item of reviews; let i = index">
+           <div *ngIf="i % 2 == 0" class="leave-message fl">
+            <div class="messageimg fl"><img src="../assets/img/words/words.jpg" alt="">
+            
+            <p class="names">{{item.username}}</p></div>
+            <div class="dbubble ml fr">
+                <div class="dbubble-text"><p [innerHTML]="item.content"></p>
+                  <p class="date">{{item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+                </div>
+                <div class="triangle-box triangle-box-left">
+                  <div class="triangle"></div>
+                </div>
+              </div>
+    
+        </div>
+
+        <div *ngIf="i % 2 != 0" class="leave-message right">
+            <div class="dbubble mr fl">
+                <div class="dbubble-text">
+                  <p [innerHTML]="item.content"></p>
+                  <p class="date" style="text-align: left;">{{item.create_time * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+                </div>
+                <div class="triangle-box triangle-box-right">
+                  <div class="triangle"></div>
+                </div>
+              </div>
+              <div class="messageimg fr">
+                <img src="../assets/img/words/words1.jpg" alt="">
+                <p class="names">{{item.username}}</p>
+              </div>
+              
+        </div>
+        </div>
+       
+      
+       
+        
+
+
+        
+    </div>
+</div>

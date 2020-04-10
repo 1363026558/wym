@@ -1,0 +1,26 @@
+{
+    "/api": {
+        "target": "http://39.105.138.173:666/", 
+        "secure": false,
+        "pathRewrite": {"^/api" : ""},
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/ip": {
+        
+        "target": "https://www.fbisb.com/", 
+        "secure": false,
+        "pathRewrite": {"^/ip" : ""},
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/address": {
+        
+        "target": "http://apis.juhe.cn/", 
+        "secure": false,
+        "pathRewrite": {"^/address" : ""},
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
+ 

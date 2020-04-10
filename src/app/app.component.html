@@ -1,0 +1,38 @@
+
+
+<!--头部开始-->
+<header>
+  <div class="nav">
+    <!-- <div class="searchs">
+      <i class="fa fa-bars" (click)="moveList()"></i>
+    </div> -->
+    
+    <div class="middle"><h1 routerLink='/home'>WYM.BLOG</h1></div>
+      <div class="searchs" >
+        <img (click)="weather()" src="./../assets/img/tianqi.png" alt="">
+      </div>
+  </div>
+  <div id="aaa">
+    <div class="triangle-box-left1" id="triangle">
+      <div class="triangle1"></div>
+    </div>
+    <iframe id="iframe1" scrolling="no" src="https://tianqiapi.com/api.php?style=ya&skin=sogou" frameborder="0"  allowtransparency="true"></iframe>
+  </div>
+  
+
+  <!--导航条-->
+  <!-- <nav>
+    <ul id="startList" class="start-list">
+      <li (click)="moveList()"><a routerLink='/home' routerLinkActive="list-active">首页</a></li>
+      <li (click)="moveList()"><a routerLink='/news' routerLinkActive="list-active">新鲜事</a></li>
+      <li (click)="moveList()"><a routerLink='/skill' routerLinkActive="list-active">技术栈</a></li>
+      <li (click)="moveList()"><a routerLink='/read' routerLinkActive="list-active">趣阅读</a></li> 
+      <li>随便聊</li>
+      <li>联系我</li> 
+    </ul>
+  </nav> -->
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

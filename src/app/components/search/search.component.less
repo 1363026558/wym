@@ -1,0 +1,85 @@
+@baseFont: 25;
+
+body{
+    overflow-y: hidden !important;
+}
+
+.search_top {
+    background-color: #fff;
+    width: 100%;
+    padding: 10rem / @baseFont;
+    display: flex;
+    justify-content: space-between;
+    
+    .search_input {
+        width: 260rem / @baseFont;
+        height: 30rem / @baseFont;
+        color: #dfdfdf;
+        font-size: 14rem / @baseFont;
+        padding-left: 8rem / @baseFont;
+        margin-left: 15rem / @baseFont;
+        border-radius: 8rem / @baseFont;
+        border: 1px solid #dfdfdf;
+        background: url(./../../../assets/img/search.png) no-repeat 10rem / @baseFont;
+        background-size: 15rem / @baseFont 15rem / @baseFont;
+        input {
+            outline: none;
+            border: none;
+            background: #fff;
+            width: 210rem / @baseFont;
+            height: 20rem / @baseFont;
+            padding: 4rem / @baseFont;
+            margin-left: 20rem / @baseFont;
+        
+        }
+        i {
+            line-height: 30rem / @baseFont;
+        }
+    }
+    button {
+        outline: none;
+        width: 50rem/ @baseFont;
+        height: 28rem / @baseFont;
+        background-color: #007fff;
+        color: #fff;
+        font-size: 13rem / @baseFont;
+        border-radius: 8rem / @baseFont;
+        border: none;
+        letter-spacing:2px;
+        margin-right: 25rem / @baseFont;
+    }
+}
+.search_history {
+    width: 100%;
+    min-height: 1000rem / @baseFont;
+    background-color: #fff;
+    font-size: 15rem / @baseFont;
+    
+    
+    ul {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 40rem / @baseFont;
+        padding-bottom: 50rem / @baseFont;
+        color: #666;
+        li {
+            height: 40rem / @baseFont;
+            line-height: 35rem / @baseFont;
+            margin-top: 5prem /  @baseFont;
+            border-bottom: 1px solid #f7f7f7;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: relative;
+            .fa-trash-o {
+                position: absolute;
+                right: 0;
+                line-height: 35rem / @baseFont;
+            }
+            a {
+                color: #666;
+                text-decoration: none;
+            }
+        }
+    }
+}

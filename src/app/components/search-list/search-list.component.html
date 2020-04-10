@@ -1,0 +1,36 @@
+
+
+<div class="main-content">
+   
+    <ul>
+      
+        <li *ngFor="let item of mydate">
+          <a [routerLink]="[ '/perread', item.id ]" [queryParams] = "{category: item.category}">
+          <div class="per-content">
+            <div class="author-info clearfix">
+              <div class="author-info-left fl">
+                <div class="author-img fl">
+                  <img [src]="item.img" alt="">
+                </div>
+                <p class="author-name fl">{{item.create_time}}</p>
+              </div>
+              <div class="author-info-right fr">
+                <p *ngIf="item.category == 2" class="skill">技术栈</p>
+                <p *ngIf="item.category == 3" class="read">趣阅读</p>
+              </div>
+            </div>
+            <div class="text-bottom clearfix">
+              <div class="text-bottom-left fl">
+                <h3>{{item.title}}</h3>
+                <p>{{item.info}}</p>
+              </div>
+              <div class="right-img fr">
+                <img [src]="item.img" alt="">
+              </div>
+            </div>
+          </div>
+        </a>
+        </li>
+      
+    </ul>
+  </div>

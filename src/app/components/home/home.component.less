@@ -1,0 +1,223 @@
+@baseFont: 25;
+//主要内容:轮播图
+
+  .tops {
+    width: 14.5rem;
+    height: 40rem / @baseFont;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8rem / @baseFont;
+    margin: 0 auto;
+    margin-top: 71rem / @baseFont;
+      a {
+        text-decoration: none;
+        font-size: 12rem / @baseFont;
+        color: #666;
+        .searchs {
+          position: absolute;
+          top: 10rem / @baseFont;
+          left: 0.25rem;
+          width: 14rem;
+          height: 20rem / @baseFont;
+          line-height: 20rem / @baseFont;
+          // border: 1px solid rgba(236,236,236,0.5);
+          border-radius: 8rem / @baseFont;
+          background: url(./../../../assets/img/search.png) no-repeat 10rem / @baseFont;
+          background-size: 15rem / @baseFont 15rem / @baseFont;
+          span {
+            margin-left: 30rem / @baseFont;
+            
+          }
+        }
+      }
+  
+    
+  }
+  .banner {
+    width: 14.5rem;
+    height: 176rem / @baseFont;
+    margin: 10rem / @baseFont auto;
+    overflow: hidden;
+    border-radius: 8rem / @baseFont;
+
+    ul{
+      display: flex;
+      width: 15rem;
+      height: 176rem / @baseFont;
+      img{
+        
+        width: 15rem;
+        height: 100%;
+
+      }
+    }
+    .guide_btn {
+     width: 8rem;
+      height: 15rem / @baseFont;
+      margin: -1rem auto;
+      position: relative;
+      ol {
+        width: 100%;
+        position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
+        height: 15rem / @baseFont;
+        margin: -0.7rem auto;
+        text-align: center;
+      }
+
+      li{
+        display: inline-block;
+        width: 5rem / @baseFont;
+        height: 5rem / @baseFont;
+        border-radius: 50%;
+        margin: 0 5rem / @baseFont;
+        background-color: #fff;
+        
+      }
+      .li_active{
+        background-color: #007fff;
+      }
+    }
+  }  
+
+  .pagelist {
+    width: 14.5rem;
+    height: 180rem / @baseFont;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    margin-top: 10rem / @baseFont;
+    border-radius: 8rem / @baseFont;
+    .guide {
+      position: absolute;
+      top: 10rem / @baseFont;
+      left: 0.25rem;
+      width: 14rem;
+      height: 160rem / @baseFont;
+      display: flex;
+      flex-wrap: wrap;
+      .per_content {
+        flex: 1 1 33.3%;
+        text-decoration: none;
+        display: block;
+        border: 1px solid rgba(236,236,236,0.5);
+        box-sizing: border-box;
+        width: 33.3%;
+        padding: 18px 0 16px;
+        text-align: center;
+        border-radius: 8rem / @baseFont;
+        h2 {
+          color: #2384E8;
+          font-size: 19rem / @baseFont;
+          margin-bottom: 2px;
+          font-weight: 500;
+          
+        }
+      
+        p {
+          color: #818181;
+          font-size: 13rem / @baseFont;
+          letter-spacing: 1px;
+        }
+      }
+      .special {
+        img {
+           width: 0.9rem;
+        height:0.9rem;
+        }
+       
+      }
+      
+    }
+  }
+
+
+  //排行榜、
+
+  .leaderboard {
+    width: 14.5rem;
+    height: 100%;
+    margin: 10rem / @baseFont auto;
+    border-radius: 8rem / @baseFont;
+    background-color: #fff;
+    .tab_button {
+      width: 12rem;
+      height: 35rem / @baseFont;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(236,236,236,0.8);
+      .tab {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15rem / @baseFont;
+        text-align: center;
+        li {
+          height: 35rem / @baseFont;
+          line-height: 35rem / @baseFont;
+          
+        }
+        .li_active {
+          border-bottom: 1px solid rgba(0, 127, 255, 0.8);
+          transition: all 1s;
+        }
+      }
+    }
+    .tab_content {
+      display: none;
+      width: 12rem;
+      height: 100%;
+      margin: 15rem / @baseFont auto;
+      font-size: 14rem / @baseFont;
+      padding-bottom: 10rem / @baseFont;
+      .mycontent {
+        height: 25rem / @baseFont;
+        overflow: hidden;
+        margin-bottom: 10rem / @baseFont;
+      }
+    
+      .myactive {
+        height: 100%  !important;
+        
+      }
+      .pactive {
+        font-weight: 600 !important;
+        font-size: 16rem / @baseFont;
+      }
+      img {
+        width: 25rem / @baseFont;
+        height: 25rem / @baseFont;
+        vertical-align: middle;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 14rem / @baseFont;
+        color: #000;
+        span {
+          color: #000;
+          font-weight: bold;
+          font-size: 14rem / @baseFont;
+          vertical-align: middle;
+          margin-left: 10rem / @baseFont;
+          font-weight: normal;
+        }
+        span:first-child {
+          font-weight: 600 !important;
+          font-size: 16rem / @baseFont;
+        }
+      }
+      p {
+        margin-left: 1.4rem;
+        font-size: 14rem / @baseFont;
+        color: #666;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+     
+    }
+    .active {
+      display: block;
+    }
+  }
